@@ -71,6 +71,7 @@ jobs/*/visual_manifest.json
 # =========================
 # Optional media artifacts
 # =========================
+*.mp4
 *.wav
 *.mp3
 *.flac
