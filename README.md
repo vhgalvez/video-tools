@@ -59,7 +59,7 @@ If you don't have Anaconda/Miniconda installed:
 
 2. **Run the script:**
    ```bash
-   python unir_clips.py
+   python unir_clips_crossfade.py
    ```
 
 3. **Deactivate when finished:**
