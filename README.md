@@ -59,6 +59,8 @@ If you don't have Anaconda/Miniconda installed:
 
 2. **Run the script:**
    ```bash
+
+   cd C:\video-tools\unir_clips_crossfade.py
    python unir_clips_crossfade.py
    ```
 
@@ -83,6 +85,11 @@ If you don't have Anaconda/Miniconda installed:
    conda activate video-tools
    ```
 
+4. Verify the environment is active:
+   ```bash
+   conda env list
+   ```
+
 ## Requirements
 
 - Python 3.11 or higher
@@ -93,9 +100,9 @@ If you don't have Anaconda/Miniconda installed:
 
 ```
 video-tools/
-├── unir_clips.py     # Main video processing script
-├── README.md         # This file
-└── requirements.txt  # Optional requirements file
+├── unir_clips_crossfade.py     # Main video processing script
+├── README.md                   # This file
+└── requirements.txt            # Optional requirements file
 ```
 
 ## Contributing

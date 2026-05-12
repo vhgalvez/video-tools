@@ -1,4 +1,5 @@
-from moviepy import VideoFileClip, concatenate_videoclips
+from moviepy.editor import VideoFileClip, concatenate_videoclips
+from moviepy.audio.fx.all import audio_fadein, audio_fadeout
 
 clips_paths = [
     "clip1.mp4",
@@ -6,23 +7,25 @@ clips_paths = [
     "clip3.mp4"
 ]
 
-fade_duration = 0.12  # mejor para TikTok/Reels/Shorts
+fade_duration = 0.12  # bueno para TikTok/Reels/Shorts
 
 clips = []
 
 for path in clips_paths:
     clip = VideoFileClip(path)
 
-    clip = clip.resized((448, 768))
-    clip = clip.with_fps(25)
+    # Normalizar tamaño y FPS
+    clip = clip.resize(newsize=(448, 768))
+    clip = clip.set_fps(25)
 
+    # Suavizar audio
     if clip.audio:
-        clip = clip.with_audio(
-            clip.audio.audio_fadein(0.05).audio_fadeout(0.08)
-        )
+        audio = clip.audio.fx(audio_fadein, 0.05).fx(audio_fadeout, 0.08)
+        clip = clip.set_audio(audio)
 
     clips.append(clip)
 
+# Unir con transición suave
 final = concatenate_videoclips(
     clips,
     method="compose",
