@@ -105,6 +105,14 @@ video-tools/
 └── requirements.txt            # Optional requirements file
 ```
 
+- Delete silence script
+  ```bash
+   python delete_auto_silence.py
+   ```
+
+- 
+
+delete_auto_silence.pydelete_auto_silence.py
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
