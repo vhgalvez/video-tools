@@ -2,9 +2,9 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips
 from moviepy.audio.fx.all import audio_fadein, audio_fadeout
 
 clips_paths = [
-    "clip1.mp4",
-    "clip2.mp4",
-    "clip3.mp4"
+    "videos\\clip1.mp4",
+    "videos\\clip2.mp4",
+    "videos\\clip3.mp4"
 ]
 
 fade_duration = 0.12  # bueno para TikTok/Reels/Shorts
